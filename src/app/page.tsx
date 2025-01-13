@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Link from "next/link";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import NavBar from './pages/Navbar'
+import NavBar from './pages/components/Navbar'
 
 
 export default function Home() {
@@ -53,8 +51,10 @@ export default function Home() {
 
     {/* Larger Image to the Right */}
     <div className="hidden lg:block w-1/3">
-      <img
+      <Image
         src="https://kitpro.site/vetheal/wp-content/uploads/sites/64/2022/01/european-cat-2021-08-26-18-00-50-utc.png"
+        width={150}
+        height={100}
         alt="Pet Image"
         className="object-cover w-full h-full rounded-lg shadow-lg"
       />
@@ -68,8 +68,10 @@ export default function Home() {
   <div className="flex items-center justify-center gap-12">
     {/* Image to the Left (Smaller Size) */}
     <div className="w-1/6">
-      <img
+      <Image
         src="https://kitpro.site/vetheal/wp-content/uploads/sites/64/2022/01/tricolor-cat-in-studio-2021-08-26-17-35-36-utc.png"
+        width={150}
+        height={100}
         alt="About Me Image"
         className="object-cover w-full h-full rounded-lg"
       />
@@ -102,7 +104,7 @@ export default function Home() {
     {/* Service Card 1 */}
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs mx-auto">
       <div className="mb-4">
-        <img src="https://via.placeholder.com/50" alt="Vaccinate Icon" className="mx-auto" />
+        <Image src="https://via.placeholder.com/50" width={50} height={50} alt="Vaccinate Icon" className="mx-auto" />
       </div>
       <h4 className="text-xl font-semibold mb-2 text-black">Vaccinate</h4>
       <p className="text-sm text-gray-600">
@@ -114,7 +116,7 @@ export default function Home() {
     {/* Service Card 2 */}
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs mx-auto">
       <div className="mb-4">
-        <img src="https://via.placeholder.com/50" alt="Pet Shuttle Icon" className="mx-auto" />
+        <Image src="https://via.placeholder.com/50" width={50} height={50} alt="Pet Shuttle Icon" className="mx-auto" />
       </div>
       <h4 className="text-xl font-semibold mb-2 text-black">Pet Shuttle</h4>
       <p className="text-sm text-gray-600">
@@ -126,7 +128,7 @@ export default function Home() {
     {/* Service Card 3 */}
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs mx-auto">
       <div className="mb-4">
-        <img src="https://via.placeholder.com/50" alt="Pet Medicine Icon" className="mx-auto" />
+        <Image src="https://via.placeholder.com/50" width={50} height={50} alt="Pet Medicine Icon" className="mx-auto" />
       </div>
       <h4 className="text-xl font-semibold mb-2 text-black">Pet Medicine</h4>
       <p className="text-sm text-gray-600">
@@ -138,7 +140,7 @@ export default function Home() {
     {/* Service Card 4 */}
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs mx-auto">
       <div className="mb-4">
-        <img src="https://via.placeholder.com/50" alt="X-Ray Clinic Icon" className="mx-auto" />
+        <Image src="https://via.placeholder.com/50" width={50} height={50} alt="X-Ray Clinic Icon" className="mx-auto" />
       </div>
       <h4 className="text-xl font-semibold mb-2 text-black">X-Ray Clinic</h4>
       <p className="text-sm text-gray-600">
@@ -150,7 +152,7 @@ export default function Home() {
     {/* Service Card 5 */}
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs mx-auto">
       <div className="mb-4">
-        <img src="https://via.placeholder.com/50" alt="Pet Checkup Icon" className="mx-auto" />
+        <Image src="https://via.placeholder.com/50" width={50} height={50} alt="Pet Checkup Icon" className="mx-auto" />
       </div>
       <h4 className="text-xl font-semibold mb-2 text-black">Pet Checkup</h4>
       <p className="text-sm text-gray-600">
@@ -162,7 +164,7 @@ export default function Home() {
     {/* Service Card 6 */}
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-xs mx-auto">
       <div className="mb-4">
-        <img src="https://via.placeholder.com/50" alt="Eye Clinic Icon" className="mx-auto" />
+        <Image src="https://via.placeholder.com/50" width={50} height={50} alt="Eye Clinic Icon" className="mx-auto" />
       </div>
       <h4 className="text-xl font-semibold mb-2 text-black">Eye Clinic</h4>
       <p className="text-sm text-gray-600">
@@ -181,7 +183,7 @@ export default function Home() {
         key={index}
         className="carousel-item bg-white-200 rounded-lg  flex-shrink-0 w-48 h-32 flex items-center justify-center text-gray-600 text-xl"
       >
-        <img src={brand} alt={`Brand ${index + 1}`} className="w-full h-full object-contain"/>
+        <Image src={brand} width={100} height={100} alt={`Brand ${index + 1}`} className="w-full h-full object-contain"/>
       </div>
     ))}
   </div>
@@ -204,22 +206,28 @@ export default function Home() {
 
   <div className="w-full lg:w-2/3 flex flex-wrap justify-center mx-auto lg:mr-10">
     <div className="w-1/2 lg:w-1/3 p-2">
-      <img
+      <Image
         src="https://kitpro.site/vetheal/wp-content/uploads/sites/64/2022/01/dog-sits-at-examination-table-in-veterinary-clinic-2021-10-21-03-38-42-utc.jpg"
+        width={1000}
+        height={827}
         alt="Veterinarian examining dog"
         className="object-cover w-full h-full rounded-lg shadow-lg"
       />
     </div>
     <div className="w-1/2 lg:w-1/3 p-2">
-      <img
+      <Image
         src="https://kitpro.site/vetheal/wp-content/uploads/sites/64/2022/01/veterinarians-working-with-animals-in-veterinary-c-2021-12-09-15-06-57-utc.jpg"
+        width={1000}
+        height={827}
         alt="Dog on examination table"
         className="object-cover w-full h-full rounded-lg shadow-lg"
       />
     </div>
     <div className="w-full lg:w-2/3 p-2">
-      <img
+      <Image
         src="https://kitpro.site/vetheal/wp-content/uploads/sites/64/2022/01/happy-veterinarians-playing-with-dog-on-yard-at-ve-2021-08-29-22-51-18-utc-1024x418.jpg"
+        width={1024}
+        height={418}
         alt="Veterinarian interacting with dog outside"
         className="object-cover w-full h-full rounded-lg shadow-lg"
       />
@@ -235,14 +243,14 @@ export default function Home() {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Information */}
           <div>
-            <img src="https://via.placeholder.com/150x50" alt="vetheal logo" className="mb-4" />
+            <Image src="https://via.placeholder.com/150x50" width={150} height={50} alt="vetheal logo" className="mb-4" />
             <p className="mb-2">Phone: +676 5456 5443</p>
             <p className="mb-2">Email: contact@vetheal.com</p>
             <p className="mb-2">Address: London Eye, London UK</p>
             <div className="flex space-x-4 mt-4">
-              <a href="#"><img src="https://via.placeholder.com/24x24" alt="Facebook" /></a>
-              <a href="#"><img src="https://via.placeholder.com/24x24" alt="Twitter" /></a>
-              <a href="#"><img src="https://via.placeholder.com/24x24" alt="YouTube" /></a>
+              <a href="#"><Image src="https://via.placeholder.com/24x24" width={24} height={24} alt="Facebook" /></a>
+              <a href="#"><Image src="https://via.placeholder.com/24x24" width={24} height={24} alt="Twitter" /></a>
+              <a href="#"><Image src="https://via.placeholder.com/24x24" width={24} height={24} alt="YouTube" /></a>
             </div>
           </div>
 

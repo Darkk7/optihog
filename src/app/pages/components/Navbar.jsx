@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from "next/image"
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +15,14 @@ const NavBar = () => {
     <nav className="flex justify-between items-center p-4 bg-blue-600 shadow-lg">
       {/* Logo */}
       <div className="flex-shrink-0 ml-6">
-        <img
-          src="https://kitpro.site/vetheal/wp-content/uploads/sites/64/2022/01/Logo-Vetheal.png"
-          alt="Vetheal Logo"
-          width="150"
-          height="100"
-          className="h-12"
-        />
+      <Image
+  src="https://kitpro.site/vetheal/wp-content/uploads/sites/64/2022/01/european-cat-2021-08-26-18-00-50-utc.png"
+  alt="European Cat"
+  width={120}
+  height={250}
+  className="h-12"
+/>
+
       </div>
 
       {/* Hamburger Menu for Mobile */}
